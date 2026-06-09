@@ -47,11 +47,22 @@
                     <span class="material-symbols-outlined text-custom-primary fs-3">shopping_cart</span>
                     <span class="position-absolute top-0 start-100 translate-middle bg-custom-secondary text-custom-on-secondary text-xs font-bold px-1 rounded-circle badge-cart">0</span>
                 </a>
-                <button class="btn d-md-none p-0 border-0 menu-btn">
+                <button class="btn d-md-none p-0 border-0 menu-btn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
         </nav>
+        <div class="collapse d-md-none bg-custom-surface border-top" id="mobileMenu">
+            <div class="d-flex flex-column p-3 gap-3">
+                <a class="font-label-bold text-label-bold text-custom-primary font-bold text-decoration-none"
+                    href="#">Головна</a>
+                <a class="font-label-bold text-label-bold text-custom-on-surface-variant nav-custom-link text-decoration-none"
+                    href="сlothes.html">Одяг</a>
+                <a class="font-label-bold text-label-bold text-custom-on-surface-variant nav-custom-link text-decoration-none"
+                    href="album.html">Альбом</a>
+            </div>
     </header>
 
     <main>
@@ -199,5 +210,8 @@
         }
         window.addEventListener('DOMContentLoaded', syncCartBadge);
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
