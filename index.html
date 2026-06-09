@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PetCare UA - Твій улюблений зоомагазин</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Be+Vietnam+Pro:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-custom-background text-custom-on-background font-body-md overflow-x-hidden">
+
+    <header class="w-full sticky-top bg-custom-surface shadow-sm">
+        <nav class="navbar navbar-expand-md py-2 container-custom d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <a class="text-headline-md font-headline-md text-custom-primary text-decoration-none logo-btn"
+                    href="index.html">PetCare UA</a>
+            </div>
+
+            <div class="d-none d-md-flex align-items-center gap-4">
+                <a class="font-label-bold text-label-bold text-custom-primary font-bold border-bottom border-2 border-custom-primary pb-1 text-decoration-none"
+                    href="#">Головна</a>
+                <a class="font-label-bold text-label-bold text-custom-on-surface-variant nav-custom-link text-decoration-none"
+                    href="сlothes.html">Одяг</a>
+                <a class="font-label-bold text-label-bold text-custom-on-surface-variant nav-custom-link text-decoration-none"
+                    href="album.html">Альбом</a>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <a href="cart.html" class="position-relative cursor-pointer cart-icon text-decoration-none">
+                    <span class="material-symbols-outlined text-custom-primary fs-3">shopping_cart</span>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle bg-custom-secondary text-custom-on-secondary text-xs font-bold px-1 rounded-circle badge-cart">0</span>
+                </a>
+                <button class="btn d-md-none p-0 border-0 menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="position-relative hero-section d-flex align-items-center overflow-hidden">
+            <div class="position-absolute inset-0 z-0 w-100 h-100">
+                <div class="position-absolute inset-0 hero-gradient z-1"></div>
+                <img alt="Happy pets" class="w-100 h-100 object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6KedKm4odVZK35LE9Vd8gWPPL_nLmorev-Eh8NV71diRSke-WnflspGWHXWFVlRHWYVFIkmTI5ib1zEAierdb1grOUrGfxJJ3nZYm6ZOeY-qIhY6qa_S6w3Gv2zyW7ZDs3KldevNIIP2DBcgt4S4mL8NTZ-Ie1Vnzctuo7RTQhH2evz0UjZ_dz4xdQO_VVy4xxKCLt1crzBEUnF5vn0Eggolq5B-VhMdiEvks92BkNobAgBGnlFKfpmt8B_M8KtRIcKUgtfO14RVQ" />
+            </div>
+            <div class="position-relative z-2 container-custom w-100 px-3">
+                <div class="max-w-xl animate-fade-in-up">
+                    <h1 class="font-display-lg text-custom-on-background mb-3">Найкращі ціни</h1>
+                    <p class="font-body-lg text-custom-on-surface-variant mb-4">
+                        Турбота про ваших улюбленців за вигідними цінами. Ми знаємо, що ваші пухнастики заслуговують на
+                        найкраще без зайвих витрат.
+                    </p>
+                    <button
+                        class="btn bg-custom-primary text-custom-on-primary px-4 py-2 custom-rounded font-label-bold shadow-sm hover-btn">
+                        Цікаво
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 container-custom">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <span class="text-custom-primary font-label-bold text-uppercase tracking-wider">Вибір тижня</span>
+                    <h2 class="font-display-lg m-0">Популярні товари</h2>
+                </div>
+                <a class="text-custom-secondary font-label-bold d-flex align-items-center gap-1 text-decoration-none hover-underline"
+                    href="#">
+                    Дивитися всі <span class="material-symbols-outlined fs-6">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4 product-card" data-id="1" data-title="Преміум корм для собак"
+                    data-price="850"
+                    data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCkuqUiqacFdVgSIrK39-KeCd20ME37y3z6ocZUfY4-HwMZrAY910dVcj-oIXsFC1A4MTKpr8SWVp3OCe2lNnNiw7e46w3c2iHOpkvy9ZsEU0SbRvvGW18ojhZ_h3W3iG8nbS2kAWt-llmXBts3FQgJGt0u-ZfF48D4-e9pX-krGYsGpiFgPlcNtCzjLmv1WbDz2E4fxYlerEGIqvNYbe5WaaYd9b2YSRVKSfFLnCxk3xFrK35HY579vk9QYVPsRLW-yd1ztwqEJFBj">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden group-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Premium Dog Food"
+                                class="w-100 h-100 object-cover card-img-top transition-transform"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkuqUiqacFdVgSIrK39-KeCd20ME37y3z6ocZUfY4-HwMZrAY910dVcj-oIXsFC1A4MTKpr8SWVp3OCe2lNnNiw7e46w3c2iHOpkvy9ZsEU0SbRvvGW18ojhZ_h3W3iG8nbS2kAWt-llmXBts3FQgJGt0u-ZfF48D4-e9pX-krGYsGpiFgPlcNtCzjLmv1WbDz2E4fxYlerEGIqvNYbe5WaaYd9b2YSRVKSfFLnCxk3xFrK35HY579vk9QYVPsRLW-yd1ztwqEJFBj" />
+                            <span
+                                class="position-absolute top-0 start-0 m-3 bg-custom-tertiary text-custom-on-tertiary px-2 py-1 rounded-pill text-caption font-bold">ХІТ
+                                ПРОДАЖУ</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex align-items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="text-caption text-custom-on-surface-variant ms-1">(48)</span>
+                            </div>
+                            <h3 class="font-headline-md font-bold mb-2">Преміум корм для собак</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-3">Збалансований
+                                раціон для дорослих собак з усіма необхідними вітамінами.</p>
+                            <div class="d-flex items-center justify-content-between align-items-center">
+                                <span class="text-custom-primary font-bold fs-4">850 грн</span>
+                                <button
+                                    class="btn bg-custom-secondary text-custom-on-secondary px-3 py-2 custom-rounded d-flex align-items-center gap-1 hover-btn-sec">
+                                    <span class="material-symbols-outlined fs-5">shopping_basket</span>
+                                    <span class="font-label-bold">Купити</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 product-card" data-id="2"
+                    data-title="Стильний набір (нашийник + повідець)" data-price="450"
+                    data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDxgqa3IcKphVJdIGJf0jvKprN8Cx1jJ53vMxHp-ARYcmcG-8GbpWbz6f53rbtMVMvWQX-2Budb7NFI05nBPVzaY-9V5ymbx4wQ2DHtcJvvoZz6cZu3szeclPGwBBadxtV0HGZPoGOQPTRlWYkXckILHC7wvhq5JPLS9w1mYxGdvz0vAfoQ3FXL9YMaUsAaf3E6r4hii2hP3DMs_Pad0whka1IaJ5tcMSdrFUoUWuZNAKNO3NdbwbSl9JssLjmH-luJTh9lpGuUDAVX">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden group-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Dog Collar Set" class="w-100 h-100 object-cover card-img-top transition-transform"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxgqa3IcKphVJdIGJf0jvKprN8Cx1jJ53vMxHp-ARYcmcG-8GbpWbz6f53rbtMVMvWQX-2Budb7NFI05nBPVzaY-9V5ymbx4wQ2DHtcJvvoZz6cZu3szeclPGwBBadxtV0HGZPoGOQPTRlWYkXckILHC7wvhq5JPLS9w1mYxGdvz0vAfoQ3FXL9YMaUsAaf3E6r4hii2hP3DMs_Pad0whka1IaJ5tcMSdrFUoUWuZNAKNO3NdbwbSl9JssLjmH-luJTh9lpGuUDAVX" />
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex align-items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-outline-variant">star</span>
+                                <span class="text-caption text-custom-on-surface-variant ms-1">(12)</span>
+                            </div>
+                            <h3 class="font-headline-md font-bold mb-2">Стильний набір (нашийник + повідець)</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-3">Міцний та яскравий
+                                аксесуар для безпечних та комфортних прогулянок.</p>
+                            <div class="d-flex items-center justify-content-between align-items-center">
+                                <span class="text-custom-primary font-bold fs-4">450 грн</span>
+                                <button
+                                    class="btn bg-custom-secondary text-custom-on-secondary px-3 py-2 custom-rounded d-flex align-items-center gap-1 hover-btn-sec">
+                                    <span class="material-symbols-outlined fs-5">shopping_basket</span>
+                                    <span class="font-label-bold">Купити</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 product-card" data-id="2"
+                    data-title="Іграшка для тварин" data-price="450"
+                    data-img="https://th.bing.com/th/id/OIP.YdpSRfdA-37Oiw6lIjpWEwHaHa?w=202&h=202&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden group-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Dog Collar Set" class="w-100 h-100 object-cover card-img-top transition-transform"
+                                src="https://th.bing.com/th/id/OIP.YdpSRfdA-37Oiw6lIjpWEwHaHa?w=202&h=202&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" />
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex align-items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-outline-variant">star</span>
+                                <span class="text-caption text-custom-on-surface-variant ms-1">(12)</span>
+                            </div>
+                            <h3 class="font-headline-md font-bold mb-2">Іграшка для тварин</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-3">Яскрава іграшка для безпечних ігор.</p>
+                            <div class="d-flex items-center justify-content-between align-items-center">
+                                <span class="text-custom-primary font-bold fs-4">150 грн</span>
+                                <button
+                                    class="btn bg-custom-secondary text-custom-on-secondary px-3 py-2 custom-rounded d-flex align-items-center gap-1 hover-btn-sec">
+                                    <span class="material-symbols-outlined fs-5">shopping_basket</span>
+                                    <span class="font-label-bold">Купити</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+        <section class="py-5 container-custom">
+        
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4 product-card" data-id="1" data-title="Преміум корм для котів"
+                    data-price="850" data-img="web application/stitch/projects/15399150270216548977/screens/edeeb74ffed447b5aff0580c67c4e411">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden group-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Premium Cat Food"
+                                class="w-100 h-100 object-cover card-img-top transition-transform"
+                                src="cat.png" />
+                            <span
+                                class="position-absolute top-0 start-0 m-3 bg-custom-tertiary text-custom-on-tertiary px-2 py-1 rounded-pill text-caption font-bold">ХІТ
+                                ПРОДАЖУ</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex align-items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="text-caption text-custom-on-surface-variant ms-1">(48)</span>
+                            </div>
+                            <h3 class="font-headline-md font-bold mb-2">Преміум корм для котів</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-3">Збалансований
+                                раціон для дорослих котів з усіма необхідними вітамінами.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-custom-primary font-bold fs-4">850 грн</span>
+                                <button
+                                    class="btn bg-custom-secondary text-custom-on-secondary px-3 py-2 custom-rounded d-flex align-items-center gap-1 hover-btn-sec">
+                                    <span class="material-symbols-outlined fs-5">shopping_basket</span>
+                                    <span class="font-label-bold">Купити</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 product-card" data-id="7"
+                    data-title="Преміум вологий корм для котів" data-price="65"
+                    data-img="https://th.bing.com/th/id/OIP.GH6j2M8tj3cnofPj-FzS_gHaHa?w=193&h=193&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden group-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Wet Cat Food" class="w-100 h-100 object-cover card-img-top transition-transform"
+                                src="https://th.bing.com/th/id/OIP.GH6j2M8tj3cnofPj-FzS_gHaHa?w=193&h=193&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" />
+                            <span
+                                class="position-absolute top-0 start-0 m-3 bg-custom-secondary text-custom-on-secondary px-2 py-1 rounded-pill text-caption font-bold">НОВИНКА</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex align-items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="text-caption text-custom-on-surface-variant ms-1">(32)</span>
+                            </div>
+                            <h3 class="font-headline-md font-bold mb-2">Преміум вологий корм для котів</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-3">Соковиті шматочки
+                                м'яса в ніжному ароматному соусі для вибагливих мурчиків.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-custom-primary font-bold fs-4">65 грн</span>
+                                <button
+                                    class="btn bg-custom-secondary text-custom-on-secondary px-3 py-2 custom-rounded d-flex align-items-center gap-1 hover-btn-sec">
+                                    <span class="material-symbols-outlined fs-5">shopping_basket</span>
+                                    <span class="font-label-bold">Купити</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="col-12 col-md-6 col-lg-4 product-card" data-id="7"
+                    data-title="Преміум вологий корм для собак" data-price="65"
+                    data-img="https://zoodom.ua/media/cache/sylius_shop_product_large_thumbnail/old/r/o/royal_canin_hepatic__1.jpg">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden group-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Wet Dog Food" class="w-100 h-100 object-cover card-img-top transition-transform"
+                                src="https://zoodom.ua/media/cache/sylius_shop_product_large_thumbnail/old/r/o/royal_canin_hepatic__1.jpg" />
+                            <span
+                                class="position-absolute top-0 start-0 m-3 bg-custom-secondary text-custom-on-secondary px-2 py-1 rounded-pill text-caption font-bold">НОВИНКА</span>
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex align-items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="text-caption text-custom-on-surface-variant ms-1">(32)</span>
+                            </div>
+                            <h3 class="font-headline-md font-bold mb-2">Преміум вологий корм для собак</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-3">Соковиті шматочки
+                                м'яса в ніжному ароматному соусі для вибагливих гавчиків.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-custom-primary font-bold fs-4">65 грн</span>
+                                <button
+                                    class="btn bg-custom-secondary text-custom-on-secondary px-3 py-2 custom-rounded d-flex align-items-center gap-1 hover-btn-sec">
+                                    <span class="material-symbols-outlined fs-5">shopping_basket</span>
+                                    <span class="font-label-bold">Купити</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 product-card" data-id="8" data-title="Портативна дорожня пляшечка"
+                    data-price="290" data-img="https://images.prom.ua/4552834018_w640_h640_butylka-dlya-vody.jpg">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden group-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Travel Water Bottle"
+                                class="w-100 h-100 object-cover card-img-top transition-transform"
+                                src="https://images.prom.ua/4552834018_w640_h640_butylka-dlya-vody.jpg" />
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex align-items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-outline-variant">star</span>
+                                <span class="text-caption text-custom-on-surface-variant ms-1">(19)</span>
+                            </div>
+                            <h3 class="font-headline-md font-bold mb-2">Портативна дорожня пляшечка</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-3">Зручна напувалка з
+                                вбудованою чашею та герметичним клапаном для прогулянок.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-custom-primary font-bold fs-4">290 грн</span>
+                                <button
+                                    class="btn bg-custom-secondary text-custom-on-secondary px-3 py-2 custom-rounded d-flex align-items-center gap-1 hover-btn-sec">
+                                    <span class="material-symbols-outlined fs-5">shopping_basket</span>
+                                    <span class="font-label-bold">Купити</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 product-card" data-id="9" data-title="Керамічна миска на підставці"
+                    data-price="340" data-img="data:image/webp;base64,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">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden group-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Pet Bowl" class="w-100 h-100 object-cover card-img-top transition-transform"
+                                src="data:image/webp;base64,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" />
+                        </div>
+                        <div class="p-3">
+                            <div class="d-flex align-items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                <span class="text-caption text-custom-on-surface-variant ms-1">(25)</span>
+                            </div>
+                            <h3 class="font-headline-md font-bold mb-2">Керамічна миска на підставці</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-3">Стильна та важка
+                                ергономічна миска. Запобігає втомі вусів та ковзанню.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-custom-primary font-bold fs-4">340 грн</span>
+                                <button
+                                    class="btn bg-custom-secondary text-custom-on-secondary px-3 py-2 custom-rounded d-flex align-items-center gap-1 hover-btn-sec">
+                                    <span class="material-symbols-outlined fs-5">shopping_basket</span>
+                                    <span class="font-label-bold">Купити</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div
+                        class="bg-custom-primary-container text-custom-on-primary-container p-4 custom-rounded h-100 d-flex flex-column justify-content-between position-relative overflow-hidden bento-banner">
+                        <div class="z-2 position-relative">
+                            <h3 class="font-headline-md font-bold mb-2">Підпишіться на розсилку</h3>
+                            <p class="text-body-md mb-4 opacity-90">Отримуйте знижки до -20% на перше замовлення та
+                                поради з догляду.</p>
+                            <div class="d-flex flex-column sm-row gap-2">
+                                <input
+                                    class="form-control custom-input border-0 bg-white-opacity px-3 py-2 text-custom-on-primary-container"
+                                    placeholder="Ваш Email" type="email" />
+                                <button
+                                    class="btn bg-custom-secondary text-custom-on-secondary font-label-bold px-4">OK</button>
+                            </div>
+                        </div>
+                        <div class="position-absolute bottom-0 end-0 opacity-20 transform-rotate icon-bg">
+                            <span class="material-symbols-outlined text-giant">pets</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-custom-low py-5 overflow-hidden">
+            <div class="container-custom">
+                <div class="text-center mb-5">
+                    <h2 class="font-display-lg mb-2">Що говорять наші клієнти</h2>
+                    <div class="w-24 h-1 bg-custom-primary mx-auto rounded-pill" style="width: 96px; height: 4px;">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8">
+                        <div
+                            class="glass-card p-4 custom-rounded-lg shadow-sm position-relative border border-custom-high mt-4">
+                            <div class="position-absolute top-0 start-50 translate-middle avatar-wrapper">
+                                <img alt="Maria's avatar"
+                                    class="w-100 h-100 object-cover rounded-circle border border-4 border-white shadow-sm"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ZNSRbIiYAqPY9ss-VFOrjk5twK8po4GUar6HCGzel0ggW057CVeNg-5fWR36OIUtqksLmz5eoPZaAkfq4-XNF9sbzi_4YT-J6lHsx3A7i2sIW92zpiiW6c7nmryTM5hCeHUWQj78wGxaaqRvt9um2Ag1zk1Un2fllIy7FiowqRYyZgqJsckXfv4Mxhb0uBpSo9CjY4UyeneconKGODAAWF7d-VbAmJI3Q-S5_nHkRB92w_x5Yajr5NEWdDolq9ov7KkqcD9dnSk-" />
+                            </div>
+                            <div class="pt-4 text-center mt-3">
+                                <div class="d-flex justify-content-center gap-1 mb-2">
+                                    <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                    <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                    <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                    <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                    <span class="material-symbols-outlined text-custom-tertiary star-filled">star</span>
+                                </div>
+                                <h4 class="font-headline-md mb-2">Марія</h4>
+                                <p class="font-body-lg text-custom-on-surface-variant fst-italic">
+                                    "Дуже задоволена якістю товарів та швидкою доставкою. Мій пес у захваті від нового
+                                    корму! Буду замовляти ще обов'язково."
+                                </p>
+                            </div>
+                            <div class="position-absolute bottom-0 end-0 opacity-10 m-2">
+                                <span class="material-symbols-outlined text-quote">format_quote</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full mt-5 bg-custom-highest">
+        <div class="container-custom py-4 border-bottom border-custom-opacity">
+            <div class="row align-items-center g-3">
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <span class="text-headline-md font-headline-md text-custom-primary">PetCare UA</span>
+                    <p class="text-caption text-custom-on-surface-variant opacity-80 m-0 mt-1">Ваш надійний партнер у
+                        догляді за тваринами.</p>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a class="font-body-md text-custom-on-surface-variant text-decoration-none footer-link"
+                            href="#">Про нас</a>
+                        <a class="font-body-md text-custom-on-surface-variant text-decoration-none footer-link"
+                            href="#">Доставка</a>
+                        <a class="font-body-md text-custom-on-surface-variant text-decoration-none footer-link"
+                            href="#">Контакти</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 text-center text-md-end">
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                        <a class="text-custom-on-surface-variant footer-social-link" href="#"><span
+                                class="material-symbols-outlined">face_nod</span></a>
+                        <a class="text-custom-on-surface-variant footer-social-link" href="#"><span
+                                class="material-symbols-outlined">photo_camera</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-custom py-3 text-center">
+            <p class="text-body-md text-custom-on-surface-variant opacity-70 m-0">© 2024 PetCare UA. Всі права захищені.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

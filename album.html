@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PetCare UA - Модний Лукбук</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Додатковий невеликий стиль для активних кнопок фільтрації */
+        .filter-btn.active {
+            background-color: var(--md-sys-color-primary, #6750A4) !important;
+            color: white !important;
+        }
+        .gallery-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="bg-custom-background text-custom-on-background font-body-md overflow-x-hidden">
+
+    <header class="w-full sticky-top bg-custom-surface shadow-sm">
+        <nav class="navbar navbar-expand-md py-2 container-custom d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <a class="text-headline-md font-headline-md text-custom-primary text-decoration-none logo-btn" href="index.html">PetCare UA</a>
+            </div>
+
+            <div class="d-none d-md-flex align-items-center gap-4">
+                <a class="font-label-bold text-label-bold text-custom-on-surface-variant nav-custom-link text-decoration-none" href="index.html">Головна</a>
+                <a class="font-label-bold text-label-bold text-custom-on-surface-variant nav-custom-link text-decoration-none" href="сlothes.html">Одяг</a>
+                <a class="font-label-bold text-label-bold text-custom-primary font-bold border-bottom border-2 border-custom-primary pb-1 text-decoration-none" href="album.html">Альбом</a>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <a href="cart.html" class="position-relative cursor-pointer cart-icon text-decoration-none">
+                    <span class="material-symbols-outlined text-custom-primary fs-3">shopping_cart</span>
+                    <span class="position-absolute top-0 start-100 translate-middle bg-custom-secondary text-custom-on-secondary text-xs font-bold px-1 rounded-circle badge-cart">0</span>
+                </a>
+                <button class="btn d-md-none p-0 border-0 menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="py-5 bg-custom-low border-bottom text-center">
+            <div class="container-custom max-w-xl py-3">
+                <span class="text-custom-primary font-label-bold text-uppercase tracking-wider">Наші стильні хвостики</span>
+                <h1 class="font-display-lg mt-2 mb-3">Фотоальбом: Пухнасті Модники</h1>
+                <p class="font-body-lg text-custom-on-surface-variant mb-4">
+                    Одяг для тварин — це не лише про красу, а й про затишок, тепло та захист від негоди. Подивіться на наших щасливих клієнтів, які вже оцінили комфорт фірмових худі, светрів та дощовиків від PetCare UA!
+                </p>
+
+                <div class="d-flex justify-content-center gap-2 mt-4">
+                    <button class="btn bg-custom-secondary text-custom-on-secondary px-3 py-2 custom-rounded font-label-bold filter-btn active" data-filter="all">Всі фото</button>
+                    <button class="btn bg-custom-lowest text-custom-on-background px-3 py-2 custom-rounded font-label-bold border filter-btn" data-filter="dog">Песики 🐕</button>
+                    <button class="btn bg-custom-lowest text-custom-on-background px-3 py-2 custom-rounded font-label-bold border filter-btn" data-filter="cat">Котики 🐈</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 container-custom">
+            <div class="row g-4" id="gallery-grid">
+                
+                <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="dog">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden gallery-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Мопс у в'язаному светрі" class="w-100 h-100 object-cover card-img-top" src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80" />
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-headline-md font-bold mb-2">Арчі та його оверсайз</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-0">
+                                Веселий мопс Арчі обрав наш м'який в'язаний светр для осінніх прогулянок у парку. Затишно та дуже стильно!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="cat">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden gallery-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Кіт у кумедній шапці" class="w-100 h-100 object-cover card-img-top" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80" />
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-headline-md font-bold mb-2">Саймон: Осінній вайб</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-0">
+                                Коли за вікном холодно, Саймон гріє свої вушка у нашій ексклюзивній міні-шапочці з флісу.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="dog">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden gallery-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Собака в дощовику" class="w-100 h-100 object-cover card-img-top" src="data:image/webp;base64,UklGRtgtAABXRUJQVlA4IMwtAADQ7QCdASopATIBPp1CmksloyIsqNgb6ZATiWNs7Y1hAfnD1d2ffc1ijHu1/m+lD1ybhDzXdGfem96XxmaYE2z2fG53qzvJGT7/4l8hHhqeqewd5P/+55Qv2z/l+wV5dvsc/eH2Wv23QE5Jt2zElVA70rb1PzXjpxzr1jFNAFevonLTXqL0LjfT0DPmXMj6lXnaq8pqg8h8q+92UE3gueOps6H2jhhGyeysI8qU6D0fx8WWJWzewOTk76j8+zPmt0LF7fHDnc9/pRmo/L58dsm3EDV+vjG8sZGSZE9aEtv8aqi5jggefRH1Txtrt4eoQqe0VaA8fTlnfSFkflbnzOkRK2mEpWXIo9VYQZJZC/9RMQEziMjCPK5NJCcWwbFltOkk/W0KL50NQqRdNqZqAfLU0XZ4CsPjzp9OP02uRrlk4DsQ5y6tGFukUXW5l0tko4lOKwXMZBu1X2QMbbNKeufsbmYiNH/fu6t3otoK0tn3nEDXI8khVvhhysYGCa0K7LE0W90YDHntu5j41AXhY1NSUhJ/8yzzG8Js+8Ws7FtkzVIZcahSbL42HdzG7n5HSnLwUDnHKfdPrVGdlWT95v4F88yBPEa2DfRtD8mfYTfmS2950S3/QuRI/KErMc7SFK6W4ucOUifQwriI06+qmZDfu0SQJk3W6x8p+vFo+S2Pldl3VD0TpfdzSvTBsXaMgafSU7NfS5v6OuIrywlfjr0RgdwBI1hnmZauDYTtpoCuVSlj3l01ZDpYake8i9sSkBRt75KGi3ODKGQY1LAL09z3vxss+CyqQ4+6XskAbUQ8PEJh6nJMDGUB3JNln1B9MV8vmW2UadzjkZFGuLNe+aF9jGcvI80M4wCZTpx5QMvHGuAjAH1BRhnMuiDUtBBXMCzdRetFwdaPSSDoUWQcpPM/wBI7fWTMpchP5xbXUJDfamAjee7IgWe8dr2XM+Vs2L/R0kW9wl/FIqCx85OrVhf7zOFoHWcEFljDpfhvuL1lKusbLt7zYHw88Y+seHMhNQeml34Jf5SuhwSsQTe5MIPTaff66QAzr6fAaaTK6ZFlMRgA97dZsfSWDKNccyhNZEo/DsVSrI08+hVuoRKYn9hzXXCOuqS3/6TvTsSLifsZsXoyNP4cM17Sd2cLziz5+V8el2MJMzSKivUrs29Ac6RHp+e8wHu6EUwf177qTWVYw3AhbrbhHcXSmGLfEKlZAB6qGHefgktK2bJpl6t6vawaohSrMZfqO7d58WhtSSANAyAUl3BDWOhbt5aoHVwKDo3ODe45XViFlsKhysPw+3Jw7/f5Fo3yTLc/Afv0LZtpekkh5y9+t+4VdXohSuhqyzmEA6A6iUase5vHWmdaLsOzmIDI3Zhy4xovz/pxPVzYRqKnh2kP3y98pT37z+d1G3yICUUUdwTMWTpizU27pCTepoGHyN8rBqmhuHw+pbL8OYQC0zq+QCUDTicqNJ04jg3afumZXaoxRafEtdTQg8hIayjnakOOBxZLcYEfsVj5zvtkxwoyR4c2AAeB0NR0THCTxw4ov9mwFHiK2jvnen66ApbKIoQvhTOawNgSY/EXGsaSphoV14u1lyXMIBKU0SoAf4GIfGzFfi9XiOOzTPW5MIN7Lta7CwkyeraWrPO786yMNZNOGnhTcK/hHoIWn2tjWSqimiK0qCBu6o7hcKrmqQe0DCWiP92jUmtHE6TQ0G69lVnBggzf/2o62wHF4y7vqKDVe+ORBgJFAwHhwIKLMpSt0fk93sgTIaUu1jx7eZJW6JOQWhLx8Yw1ERZraVhKIRIgIlofZySkD9jg814WQqOcQmotTGbKBDWI1W7QW1wEUmV05WZ8J+i9AWkQmdFKmRsHTdrRq9aAIA+LlnNq1+216CjMOKJ5PdUrae7IcgmUCk8CAZOMgFcfS7eB5ubyYEetNbtbXlGrmDSbcd32Z4n69yo4LBbve0HH7O0uIHgxHx6FT1WEN8RB/F6yuVTZukKrQfp86vq5NkqpOHZmFUugPd8n5/jofLYYU022t22NIJr/PAJ6clAexlFH3E0LUWXCONOdfg5Xtx9riBFJZf0XnrrUM7yKxSM727zmAHGsSgpenicF3BD7cstxaTZrvcIF0KzHJSQK8dam+euKJrkB9lFHm8YoL+2b/7i3pFLnEzE9Zgat7svyFc1k+1Z79cpQw+CAs+Dri+eT3/PP4M3E9dpmfuKHTKFLgM/iiBXdQtu3cxpzJV2B5alvBGGKeF9/ELzGFDwCV8SunuLnr4gekdQutu1NZNbhcXqyzvnYy9T2Zqb+tN6y6TxeZI9IUJvaO4XGFX8K5ZdBA29w1sX6MRBbd5T7WebQ/S2qCWHllToUiPGqiDhSSWb3ylUThmRaGovAt4rOikYBanPOO61n+rZFeHIPeJ7VgR7wu1Svgmhz78qWSuvBcxRyAh7l8kSgb8lJzhwWRPNwjc1oz8RIH2h2FVx5l5L1hvlLI1BNR75ubXdz3OkClO2wLhxDPCsV+4yx84dYPWGCYaSC7zFj90DAO/++ZU1DZtWVaBMYql+LHAAA/vgu4+K1L1WlVkPL+BC2d8WKiY31H6n2ogR2gOD9OOAP9I/+rAxlENaKgoVCWFyR/YCLg8gmg7sRhcpgcIiIBX0Wm5Ef1RSQfQDHn2+2wjTTpwg5gDdZ06XWDlmvtfPBHyabKIcGps9ch412d5WGso63ryc1WIhCKVbihAtNAAOwC3vpV5QSJaAL1giSD3e1SUdavFzHyNWjsdapTPMg//1UsX2ZG5nRg4po/jlen8h7svuYc2G891YZoTxfyKieUaegqPpwLkrzdL8Ti5aIY9hp3wkXN0cMAMjCemKJTAfMykxFjHyVTwYbuOIGwaL0QXqVyuMaZ/o0ba3Q2mYQGIFajQQuZXuVCex1qVcqoJhIDqwAqzRl3ib7i1BWo6C3Lq2cDbKGSZBB+bsh0GaZIZkwyNJGLtx8wpiWbMOOzMa6CN076oOheoTjE+BTxjuKfAySwzWW0K9QFGANL4i3yliB/v7hRbnCOZkblHkG6Ii+oAFmPAPAylh86W8VnkwbP+RQLxPSrDI9R4Tofg9ilcPrbltFbh0YnO/aXA3Gpnq6TJT779moiHFI76vSToQ9GA6lfugjSE3lKqDrLwIgci2OcXSBQCyy5s+kLwFLnGDjHTxHAhKeF8CLNAjKmCtQ7k0ADd927aoeGLGy7XuvltZ7DCjZRd6zRw5FlxMTz9eg+eseTuWtHHBtHZi2PgkCtl1quWJGJNgfth+OIEYpRyAo3gHJOiI7B67R7F84hAxZtoQa5jWqSEtw2hQL0Xe/j/W/7c4gVdxSXsLNsNFWGpGmVQqs8Ko5z9B0o1PJQrVDQqM5L5KCd708MBQpXSQf+QsSYEYaG8VeUKG/NhoVyoq63Ai3ql2Kgy4eM5WJ+cltPi6DBKXnxmwliaLzUu9hrYj+lwDobW8zQvD8VPe7Nezhy7PlWlWwrupi6A4WtZGptPV9m50JZoYRT6mXl9nZx5Qx4E6MRqNgc3YvaH0x6PjvwOcFa0fXP+UqMFKJklwRkUlR/RxhDBx+Y3NNFbXUHWcUfoTbCu6WHJBQmCX8ovuXfrgiNWn04elS2JP8axGLdUI9GVtQ5YueHaIqPn4neiKeoH0x2hrNLcFKzuPyvAMLT3KyPKMFrSpil0cdgtYKuB6wrOpHt6WlrQ0ZNQ7WHOOrzZ/rzZ87uLXGYjhtrlawyZdceBSXouX0/RsOkX2mthSbwgWTwT3OXn9FYoHVnlGvRaWgPw1S1iADA4kl8c2W13lt9NpdqL1G8P7TSX426KrGalYIKeaMVE4m8so/CKQ5XOxRvmjNUvMJBWzGzqn0YtSKfhQ03IhJ2ELGmvVOrBksHW/w7jmNJA6n7y9h/5sF8Qyim0z++jR4YGwwBZv+D85/Xq+TYWnrV9ujItabMQ0i6rgKgBgMwwvo0Bf0hWSUJRoUy+IwapI9iN7XrmE6ixl8jT3N/32n49U+SOLn1aZ5D4zT4Nxvg1hO28uV+Nkljsb9IhdubbO3xsp6Sjgoqd5ziVW2YlOGIl6HB4ePepoQcJjVeVOYLXDnUzWb286Tt74iuEblTPv8VXRMacjNS+sexTDc0lSKL/yEZe9H9gruQno6BJyy7XzG+7+xvHX2b/CvvXn6MCdPqGcjPH1uGssHF+CwrSdpktagwkQ2g9thiOLRRpi4n9t5lPqCbl+5QpNdiuFj2GKUbDtt6wydnF6tDAQnepie+TRyhUIS0VGVHoeEbGtS5EqrplQ3rZgsV5+ErUTiRgQ7fmYxcFLnfAi5mInS8z1DmRDJ5ZG3FBhTao/oVFRsENeXqBPQYl4B3rJjTjBApr5tvtfHNmWRqxMcxQToqtD52yGJp9vYwP4RAOIAIhO4fqxKbIjmdGcALLoyntLlxw6lZ4Jbl5/zyKOvRtePOWEMtXnjSvIZEGkm+Ky1882RqTdxiKUQzyitUVcQRGU+3Zs/ptbU7XcpzaGIrFZIV0MvQ4NAvFKaFeZT7XfGd08bDa/w/TTGeUtmhStHyvqM2fyVenLagH8PK4akmTSUFDwk77r8Yui/+3FoaNSj5sN20jJDeF5eqsv3qVvZdvrTluzcbTC8eV80A4Cy+9D3xzUM9bKJYLG2PeJsGeE6hNgW6lpqQtkulHpk3X4NIyFnzuM0OMIc41w7NyRiCFus4P8uwOnL+GrWYSAu9Myc+CWJk9G6oDbJhGLd8FGJcIQoRd5wYdJ7K9DwDXqURDyRVsgBdeICX8qfYQrrKDs0Y2jKhe7TtAmTcx+1ojPlMX9QiWHF2MKTlzvRw/QumyAbAToywN6fytMZwan2db9bMOv2knSOgisYGM5/dQLVToW/7frb4cTU4GKLbFSs3mbBmpMNTNaMm30SpgFDrm3kkk2UKLciUo/px1z0xl/P9HlXjhUm0w5XujInFWhZG96AO5YRl2C6qgh6W4dzqpYcOM5zrUkYLE49YY1FgsnQyHIUol7OfAP2ZoHpJX7UKs3Y1Nhe4BaDKWJxpW0K5r800w9kQwzpS3LtBmGDBsLcYlAMZCQH7BHetwR5dkTrsFEsw4N+mM3B5U6aQKSQqeqckEJ3BJHige67WKyy6uA29U+7/3jRQ2vTEFX3Rlr+fakW6XE1XLfsSEpo3HsFVDdhZKCuRLm7AOYavN+ORRir7WD8qUYV23XHN46F9eo6TfRag2A6M79wl7HNYxmbYqACQ3OZ3pEgZefTo9aOp9eX5mnjg/PX7Zbkr1H+eF62AFpK27K7aFdwfp9UOeVeY5lpzSiwH7m0eL99ycGwQgOri/HAeLNYiJoY6pkMqsxZJ3p+MwAg4ooIdMm3++G+VbGbkFXxfJ6Whv/RjISUxt9tIVXKGLWLUmQ7Zdx/a2E+Vb1nacVs7XuheKOnXA1Rpbx1z8yInhTBgIkj6jYP4jw6jkhu7TfAbaKZqm28FzfgeeZwMAfdbPDqiB2tKzm4JqfUhH6ExfNSGUFwAxOhZS1LDf+EqCO6W+MSek7mERYUNa692OdDVYpRG/U71vdfgyiydzO7EdtXhgYN8STJYiTBy0gAPPJk93QfBelar+lhUuBwPL/CUUPqYAECvkFNEL5XxrpWi6109KnJ8AxEl36l/eK9IM2rOpC923QKrjSy9C1rDDW2ZrlIFtxFf+aQbomR22aniyB0ZyU7y+rxq1nXBydm11gNwtvupctgCtcnt0rzCMsHfptjUbFbfUZAxEZvQTpvqkotckYqEf2bWAjgZqsp2b2CWUxuFjC5jILxHJ95kyJ1GqmPH6DQlQ0P3GZbeIozV7TYl8o2u5UK76k/QD3fwCVkEJ5DGB8sz5mvj5MXAPy12A0plQPhkAcm1iS0vAATbc82f7/jV0/BHO4pxiUGFnhMkb6ENC+WJuLn1HahHS+84CYaXjCVN5F3IBvvg7tjWKCUArpzjm6a+SgLi1g7S3yMDD5i4ERdiNPVxOEuSdS7ZfcSbkDXwjJxUeQo7DTPMAyfRLdoTHUBcuGhXB3wD/abqleBpDGcFSNG2ulIGh1z0+JkBVKIEml2NT7RF5sD51REjdCuSWqWgKYQMafi2kuQ70azUC4l8hPzWJuj7pCZxt5wOV8oUw/UvtDZQD0rgTesggu76TzKbkYC5Ko/xjmctWh6wKUtsM7zLzYfHwSPcpVJD+Jy+Pj6RDiINEIOwX/Gyt9SFGDf7JsblEgZzeh8BKlIkqZNWWX/x/yqdWwBmf+fIHwpR1na4DfoUDemhTF1NDC9mSMhhu37CnSOgENhB0fI9nsbnQRKCslucMEPKbUxcaF6uxjwi+DET2QGnjRoMQMjxpQM8YzUyQxF2b616uPEK4Yq/E6QbQ6+ybjt5lAqsityxLhSnrRZh9pVNEuvqvlp2yrActCETjRXmu2HXVJQcGCLXEpuwcYtj2htps42BCUPlO+42B/okRKuy4ogxv3hTLRjs+JNHlHf2psnMr4yybavD334ma3tFn31H3Xd5qqi288He51+NmvZbfLDGP8FqgP/qfXmvs32F1QCY4FE5Y7aIPPBIT6TXpAC8gHTDuXteWtj0Sncc960RqEg5UGjDiRTFxhQddSyjkbSFMk8z+9iA2OzW5jIIoeKtj8eO4rRbp4AJOrB2db/rhSHETHAMahRmTTBcETZkJa/j5w9RN73HB0HhRauL5xGjhvuHacakXMgUI4SYj6dqc5pUBGWsgzMamFvP22uEYImgApbKfOz6ce6R/RVzM3KJlAAz7EEUQhjRKdsCefkZbu0VOJWi/G1jle++7qKnPiSjqibK/em5Fel8vvxuhs6+6p8QstbsPdu+bOFDq8LgukCtuQYjQoGWeS+29FytbxU5d82/MLvMlnaY8ZrUkixEtZxwzun0F5wRON8ytTb4HRsPhbfG8iYThfvVC4Bn5xWOmxRDnEYx672OAiwF0BTF84bST1MymX+rVGHfxEmN4vRjfcQvt60oTZPzateYq9CzsR+wS6SGBkadYwMwmRWnPQGSc+hNujwyjndfA8vPmCNxT5XMEbB3qyvrDHSfzzq6f6NIEmp/RSPSefnniAi3wygiE/SJVN4J+LimuUucWP02M9F1Q5ZpupAy3dFSp7M/lzDy0vzN+i/IOR1rPzCWiLjZpTtXGLBo0pIh9XfnM/enBgL1fluQhnBnjdeVK5oHBf7whsGXQViQd2A5R4skeVGPCfhza2YFCpJNqf5FQ5aprb8HCrJWsluFm2s7qMXY2GAg98Vp8MSH0wjhuC0y20VVrM+CgvZNiJosERol7GQH3pVSoI6kcg+/1I+ZkeIS94hCo1iifpesABkXH75I8TSJy2NBzm43J4cHJH8YZP7nXpv23rlh+rEt+3lnLVTqe1zIzB+8QW8njrqA9LnYfNzLMAcBijawnrrQ3lFk3d7y3uy4FrcqNEady/ewtPQeztrfsiM7jB1qMHz1OC+o8BE47jZiUH9hWyLNIItaVLt97NjSrTIhl8wRKnMCFjaka11iol0znfuSeg+kl4T3tQaNnFkwcoTy4IkQGNaJb9pqeJuu19KuQRuxUGx+Ae5cN2RsU88CLpHmlXTdtpNeH2Z1kMMWpz8QQVZF4wACMCFZWIep1KVrJzp6o5cp/Y84WhfVbYD9BNpDAheLqCojxPo8WAT+exlvK/VyTCRPQ06PFJk8tbqUqs2z6I/bfe6HAV5XU0/2+SkPfGojM7EyP/DhXSpXq8paL980iwDxzv3P6Fvrvoh/S5Jh0rrzFaXuMrF9m9E+z9W4AqhJHDUjtPZJq6YQ8j9k/kCShHKyYu9sMzFuJX4EzX91bgFssrMWqz5GirkRJ3RlJhxTbtGhvVSO/hpG89SuMnXxQkl2NU2pzSKoWXmRVI354DcMgGMGyoO8TOQrvANsqORkE91e6QeFkScjuGX56CWyElyIWxsBnb3Zbg/q3ziwHIZVnul5pAsy0VdwGWU1qWhUebye2MsyEYaSX9dBEUWjTQTCeUDpZeiftxSp3s3++ongfLxB+Unogl+WSTKihDyBvrZLDbjV/rJ0AJax19+C1m2TNT9zV3cwOae2cRwlj1luFzVbimqpZva32mk4Ntfs8bwgBktOyRgpRBPuOrtMTL2M24EJ45AqCMh9+h9uWnTIJQFHd99s3sy3RQh3QdOpfjt03Q+8v24jMslSUEW/8r3HvUQzwlKMlMTfWLxtMO5z5iLKgrIvWY3wXXxmggte04gRtOqEUqHohi0krWIAI58ZykS0JDLchQiWkMctOGzUHyXeoUVdDAVpdw/abFrgZW8k33HAdSsjqlXoiBiCohi96wIby9T1HEJwk6AovQWP3LMfEY0lucg8pHH+92PMb6KoBaCZyB4jKHyVAg0KnsIe14wnlMpkPT7K301MyQcc0VzpPo+AR1kGcUwFrRVzoeYOly9UGDSGQeK1uyai/l0tMk9f8TJkc1S6ISFpSSABoFEt0HP0jEJ9CNIC8qV6MaRZke2eq20Y4h5cdsSNKOzYTYVN1RmIjI9teilUmGDsPDNYGc3PRzktaROmDzuNe7wbnbl7yOmRaZXF7QkBk+aCFpzBoZU2VL8EMc9tL0zFSMtph45hnR0z0t1gdCnkItLjt+j6/e3t8XWTbgn7/CWhg1zZSV7spfG+bpn675ysB3C6i1wKOWqDhwYix5QXepP5xwp7kVxzaRWJag6RKHqOIaYP65WdoQlmDIulVxQRIW69vQDncMcA/McR5sJUoZEhhAmz3NWyv5g2NQzhj+mEPCQlkE/B8+HLDZ4qKLOWggV39dWiPQpeFzWBzJ2qaADs4tq0aMCvNSGghfxYdbU4qC+aCHcNtk1iefELe54Y6q9WFLd6d4vECOxUAWKXbLKQq4kQFduM24NPpyvK4bzc3jMWjuJikVuswXuE1BHRWVBOl1elvHNZYCS8IhAJjWMzsynAnJeKnU6fuPbByY3xmsL92XDEroJC2B+Fhkg+471z5o3XGp96qv/CkWI2zBV+T5fZMVKpPsjPMHaPqxZNWb6pQ3PL9uZID9onY/iPtmV3UKgTjFx1IrzJDdi+Jh/lo05mzZ2oUx5a3D/YRTk6SqSoJ/uPnfCHpNeXjUITD5RJX5xAT+zM3XBRfWzUmGwafMgUUOk+KbsDStzQG2r/oypzTo0ges010U8jwoAQG3Yjcc6CsOy3Tctc3+vReTaRE3ivfOyhnP6/8+ofQv6zZNqXM/XtUcLJTkdzo6CSqs6q7vlILH//4Ks3GPYEkM3WJ+qybutgh0nu+PSRb30XUPXqlR/6WWXB3bNj4QYhpQbiL8EQ2ecoZ4WYiSgnb/PYxt97PhdkDbtyZoUxT9ND/aiShC0QrayUCDjcMmt8QotKWG+y2EC38BDnEIvAa26xSvtaFzlLfEh4Lf0VsIpCcKb+AqzfSJ+IDZu7Hav+KAYX1IRF31QQWRlCzQxNeaQTARCLFmzEaxvuTWV0FiynFLDCpiZibW54T8GSVV/GDGzY2Vehat5oKImsMuOkZCSnWBr8wWZNneIo1M2Xh2X8R1Ls6mjhjEwu7Qeae4ed2scv8fuRGdK6waCYJYP6E15ous6xfYRtLiHtmhY4fEYcTnE5zH4An8GQGVHM2fB/XfhA9iMpm2A3x2H8zgPApmWo0URDCnyUytSTDBIQ6ARYs4JIjCGIHzpqWLVQQ+Zx5XNyqjzyjB4/QeeTC/EYyTW8AUjneCw5TiCrEWTm9EjSORoR64oNow+PwQQoCfjWOuUlDyCravgxqNZhbg7fXlWUCmJC3X+zPQNZthI2W9wOwP2AupBTqw+i0X+mW3t3UKD4WmCCXNhmyXy+QaBKQFQErO0sLTsbpF06Bh/8PoVsDGq2r5e08dhJEFuG9PHR+n2Yvhr/A72huVgdqg1n3+o6k/suuGHRh1Uv6lnZxTTOTvOHlaWC56BAamMlBWG3lOacqtbZLRqWXT3q5mfddR8y6g8L3UkbOOiEEoW5BaZTo6nHoK9ITINTNsBc/pLsmF2VrKZZrqK6l47oyEezV9VSe9hbMaGWKo4lcUXB4xWACMatTPtQll0OdkAlNc+l9XHHiqbuHL7/ECTyik14Jb2to/NrRFCXmEKu6tJrW4Qhu/LP5ipg76UDd1vkbjOot0WbzBUlis+bDZ6ywp352B+UoYhVXrN6v7L97t4M+W56agHelR27KnJ4QzSdF/QW3rk1GWIavrKjMvhDL5MCTjj+EnSlQ9W7rbnzhITUJksxuGQQ+LeoGVZvHGbs1Xba2fs03463cso+HCHZ/PffUJOxhYEcfVs8D48UquXK+VV6yKmnDzkA0gZ4JDB6/UgQ5gkmGEAw/mY0nzaZuFpu3/lXZdi6hZEp2+wTdB8QqXUw6xPJBLNOeFD4cikrxai329R2GX6fxHtPpqp8K+96RBKhA86EuydEf0wjlt5kLGobLwp8qw2dALMz53jPlW4/FwrMdYfmFDdtZMIvfwYU+Cjg/E7SjlJfQg2fQ8q5n3qj4OSGYQ1oiXMaN6pQmPMbLgEjczVtsHm3ZwM34uvI99ikD2R/kQnKnHyXS0v/3xmG1fBHDdMbrC7E/yrk6rshMnjgIyXFNOZUjBHaW+/cQSTYfzruQ5WbbxAjeOtKSDDMRTXmkN+iekcjPRLO/7DNht8ZP5zR3f9/HTOz6t+c7LZY8c5t+8o4kMMCkuQyqtJ2DNSW1SL0MuzBVSS22y4Ykbw9KP83NRuXazONMMzabZW5oHsPa7wXwZZm48OaYCxTmDMvKA75czdoPjC+wMacrrGVDH2ulkRizs3sQFBTd9bW+Mb/H7pamlwZS1ZqaV9VMy/5oA4Phg9kZi9vuRFWNxIHnw0vKZJ8EanypU7AaACbjKWyOt8Pu6W2fypWsxArwIs8/DepIkVxg/Xv0jrFP5Pe6QbT+WGstZ2AAY49XiNDAZHt7rSP8unDHyuWdpw4U1iFzTj4+b/qkt2X80gwkw6lOgp/h5z0b6780JpU/auRWbUfZdCHn20KGYWuhDF2dorDitLyBYBR4Aa757j+9iu0897MNSaBt052rfT38OwyOiy2QgXs1vs0ApgLQ8vIoAdsC4FQzPb8POTUrGl7zwsTLqiT1UMpUHNLAfFJe12Km2IeLyN1ZTicUxXU6WBRqat66o+59DUJgYpg70UrJeh398Mp0t79GfwcJ7aV05/O91DD2BN2o9HfElpvmq10tSL+XVCeuZab+sY64yCyJckyKHEZmu+FEYlNhORbyfYedGARcEB8+/IjoHzBrLfU303Yq+EkZn4lIYXM0cVvNZc/WOmltHi4F5ZU7K7iDZuGuYtY5wf3OPVl1yjHW9xfPl5/8g/12x18zNZMCFhncHnFhZXZ3Wr2NWO+idcF6IHs8c1rhI4YeM8kvemuJSXd2dKny9+DPLwvtcpHQcyJf2iqPrAsXPfRzWkFt3Fvnhj5R4v8qz4KikqHRmpD/FDa89g9l3kTzemQkVaoZS9+K/Us8U9uuC/rqM5nwEaL44J8XF3c2uVKbYzlcqflT+AfD10Z0DYszLKHvl/i8xSrhzYKEcnd84MSQBHT1H76MfRs7MvFyBTpPahSPrZu/ZHQKB3/dC/fdWP5kd+O7HJ3jCMHrz5oVRRk6VxAQmbnwHVGWdAl7K3KKByOfGKlq1G+Re2cc/CqvCdSqpjf5QmvKUZXPakuWQHjSJYQfBTk7a5KHx+0qHeudHJ0oMk3d9fVPguJZcSWrTa8iNJBajZ9i0yWzLs8hcZiRNJg9LoYuWcXJm9KOkGatFkSKIzOm+/ZvyaDVaoWhYVPFMZfMWPSdaD70okx+WuJPZHA9SHbAikg33tRVBd5dCeoqA5P2HDQYg2P1UNUEcN9aNANuIonN/wCKq9ceuIqWVKijHB3bYWNxK/v9Ie34A+MlLkcBo5FQD27DB8n73irGEuRVKdrtqvnJTc2+CepUgB4VzyjOE6vaCQ/6+B+LFPs2pMrJc/77Ba6egGl9o9MZNXPJ0C9ASIN6wV1AvE0HRByoi01h6bmBXYzYAh9wdXFRxUxyW0oqO0MZWtJVKiPz94BPCNQuXbBVEzYeN62pQQtL4n/gP3KAxFCBrhOYrPTY31yMrthTC7/FD9Y1/dAAhG93I9dd7FMHdNz2G0XQ6lNt155pi2ul0lk+kspHVGzpHchhbiVNnJewGNAYWrpKLoqQI/ja82fiTaQdMO+AfAL4FK5IoffTA7cYr01YKnVmkKsxRcVBj/dZYSKKkU3aMIXUjoXTjU/hDYA5I+nrL29SUex5FEWOtpmHr1jqv2OtoH39PwfEQ/HjMNfYMJmxd2ys6HnXhqxt0x3CsBlz0nzRqQ3bKUtsxLjGJLku2R7zhaIChNNsE8FNgrUh9LntTsL5P8wtnwPUSGfODVKvUePcEx+icSKjtPNNWrAlGPrafTechcvAxL0hqW4SAB+Kc4XOkECeOHT7r2oaPl49O6BQ7RuEs/1bLqDtC3KxnvrMLZnjfJwT06BUujDdBjD0f+mIULc07xjfcOpV3BWZkDO9M6y6t1HPya/3t9E61i3/DqiW1kFHgGN8RDIvMBqRwLyu1UKL0PLsj+eGC3jfJdJGczzcMiE/jTW8iR6D9nutg22zD84RXrcgsa4m66yos2Qhuuqfli+z3X5JPt6vXT56LaB6IFgfA28kKOPM2tYzXxZw4592OLiS6XKnpb9SpOsZsSnbx8qdYFFCM37Q9wzc1T86zPg3mMJjqkhwFP8ZY75U6J+eHjopci1rmH2lJNK9d0EJgWdoPsmqeZKDE9veVpi085ZnOZqq64Bfyvl9DwjM+vELr7AueXoEwhcSMvyaiyn2YD431seA+X7FxsBgqUeygCNJAGZ9s9aMG0K0BgMWMfT86F79dmx5yPRhGbmzGRVDNdTONv2ixxLYNscNVEN8jGzv2Zh/MpwOassbku7JKkj1nAT1ncsJYOsPuH/XmDCSRc4qYPl1O0u4+uw0FZYvOVsq/ZMjXWn5mIlonqqp8MJ5GiJA1Eu/5LCiXcT2neDTW9dUHuvgsTWxmYzrkyxPHZiqZbo9nUoqrEmk9CAuS1DmASAuW/bCmed6iJV6FTqt6S+klajHZxjxaO3Et9Vtbq29MNb/UYJqKY9ar5FaCKMPaf/Lexo6Q2tQ80+v4mdMcdBLEkgPO3LER1htg7X9XfRDd/qZX993NKGnmSuh53/7rQT2rU+k8W21z93+xCfpDbQ+MKbIvA0nHdF96AoCDtNsz9XEaAFP7gy0xuceXmKwXsdcrWFQAPXrCm8WHVhJb6pZODm87dUWIKbeF5UIVP3kQqyAj9xXqhT+cpsBCWTekYf3EZrpPm7l1XhYoiClXdMqBA76Ky9K4xT7Ucz47ClfW+WjlJjB17nf8u8unnXqFXRvAARLb/iBmPAp2RZg618NabtSeEbXZVKHC5pcLsN5zE9MmpnTICats5r/Bv5Qwzs0LOIoyoJxcOZd+Ng0DLNDdPHWfCp/rCWUhJm7xHJriuAHwBVznQgatNV4xvS0i/IC55/hvuFSbgQ7hpw+yjY7HfB/7G4P1XfZ9Ojb5r/HMou+rRjYH5knlzF7kwClY7L2KUNGY0wnNazfp161ncWMufWtjqDmbuIoAcBG8KRYDTS5bu/j2Qul0owoCp0YrchoA4GQzLppYwQKFG1b66CIqaVkp9vp1ztrswYni0diLnvMb03hBx2XjpiEll5SP3wIKqe3jiNCpevfbqe6MHlHJIiPkh90kmXmExyAwMhsh2AFzvhv02GNOJVhqWOi6Dmcrqhs9fPaqaVsYpeEYWOsJ4MDw9uWr+Ez3KKDoUtk8MvjY5qn2Wx8f7hokELBflFH6pmrqplOU3Xlwr09zDkN1xYR8SlurtxjkMVinq43rEUZw7pUHJyZpn4rryzeEXsuncYCBOub3+4JM//NIQP/gLezGWKLPTM5yybDmAQD+JYdMkLFgjGd5YPlHogyfD3Opx4lBD+fvtIH/Oa6l4kpa8qNlGvj2KATx1/9AaYacj+3DxlOOKnhBP26umODEI+dkxraz6mW2nsIjwZ0k3NrvGBZycocFdbkhePR/H555N8i0Eu/vL09cgca0cx4ra3QDtXpYtvqHWNQb0IfA5enbs14eHYcVNO/b4ph4sxcazsEEg2OKmK8kuDZDAsUHk4FUc54J0dZdoY9ItnMkw8vygnLdBXkbYFK75RXB55DeXElNwtJi0djpkT9MWg24s1czGGXGG7Ph5telpegGKzKdh8iJptXFFffgOT3cY9pCULkRse1IehFov8fme7fNMl+KtIfX6xxNeqWwUZAaiamDH2L0W+WWeNp0CTrKSZ1WX7qCN+oSv7pIemJ8D/jArgpE3ffbQza9mJK/EVJC93MRNyyToenFhu7I9rjGPDBMD0srgCKEvbnKLwM3HevhGrJjMSgohcyKAvvcDJ11oBvGzWNpOuP4lYHXUzhlopBzPssQhd5gfP6E5sK8vssYsYyk9kBrhMOHlW+4JTbEsP1APzjphfavTSSThjh7eqeLYPEkPrl33HNrxMHnj24qbJsECgADxxqNN3Y4DHj1FR4pdelfk46eDCtTU/tYFCw/CHbRflcNfwzQT1BTRuv+qErbotVYQjaDfr2AGjrAZbYGTqbLrys6fzwJypNBlylHLlzYYb+xqkQ0C9R4GYAARnClLn09fWf9lqffVCP1TjsU8CXToN8wFsSUL2h4Zc7/mg9sME1XTKNJCfNgLvb1O/3ltoXgPqi0FKVHRHy2rYeL0fTA8dheW05ZVeeG61RJO1nSFkQWg3u5Qh89gl0SfN8fWwNJ/qxpwkXUkqPctdtLwxojnp2e4x/mZz1flmDMFgiTHntgj2CExDE5IInuX1RuEybo45ZpcSshk5H+INv3gQT0Jv1mWvW5kqdNhFFrPwIoyUzvQ9LRQcRFH+uQ/zq6yobw1yy33sj6OYj+swW6yhsHYbZobokxaCC0AN2wWxrxiPkHyMjMvNZDPJRziZNg56L4eJ96B/hbkIUWVFDhapGcAM5bu4Yj5QSkIT7i5KAnv0OOxfEWoSd5rc4shyfneQX+pN3mp9573ltbMOBwwcRCmgWdigp+F6Ywwbf7GycnaOCXs+Bm40tf2ha6qQVXm7xafcXE2DRsxNXxS9Iqu3B6vpMe7Y8lEvOFP2MVElUR8jyMFbfHAzC04NEIBUvNUljiRLlmWfhLQEP4H9FzqyVIQDQsP94e41BCU8vqTwBsbJXgV0Z86vyGVCjzcG8N3DhEvJn0XfaOw6LA+25t9QZfuYkYkTC+S+KFKKUgi/NZ5a+r9uBSaUauFDEq36G8rcBH9W9L5S8vVz8wZaszsRd+0y2JhFimVVPCD6DFk1rUt+yDcbamHxf1kMvZ7UxYtZ1zh+r8rF0ABFQv6CaD8fz32M1Y2x0GVfyahHlsKblPXcc7KuT6Is1nGGZKojR5FQhj5QunQ5wYfThQI2fEAAIAo8Y+NOpoUwJqWQ958QeAILLukpFmcHfSUQA0RUVjmheG1dpUptrFxHNwA1GrMwXllADk75OqfgOA9buCTCvAaPF3fUui4bEwhA5Uq+FjA4hXsvSNavtcWfFkLJWrZAi0O1npsA5D3PNVTTBAYz9WxRVsuO5eeKVLrBSG67L2lhgRxL4ber6cWP2AEEG5C8VAAAAA=" />
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-headline-md font-bold mb-2">Рекс готовий до зливи</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-0">
+                                Яскравий водонепроникний комбінезон захищає густу шерсть від бруду. Калюжі тепер не страшні!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="cat">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden gallery-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Кіт у стильному худі" class="w-100 h-100 object-cover card-img-top" src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600&q=80" />
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-headline-md font-bold mb-2">Кекс та вуличний стиль</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-0">
+                                Спортивне худі з капюшоном підкреслює незалежний характер кота Кекса під час вечірніх посиденьок.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="dog">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden gallery-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Песик у шарфі" class="w-100 h-100 object-cover card-img-top" src="https://images.unsplash.com/photo-1608096299210-db7e38487075?w=600&q=80" />
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-headline-md font-bold mb-2">Джентльмен Оскар</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-0">
+                                Елегантний вовняний шарф додає справжнього французького шарму звичайній денній прогулянці.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 gallery-item" data-category="cat">
+                    <div class="bg-custom-lowest card-custom h-100 shadow-sm overflow-hidden gallery-card">
+                        <div class="position-relative bg-custom-low aspect-square overflow-hidden">
+                            <img alt="Кіт у краватці-метелику" class="w-100 h-100 object-cover card-img-top" src="a_high_quality_professional_studio_portrait_of_a_handsome_dog_like_a_golden (1).png" />
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-headline-md font-bold mb-2">Барон: Готовність до свята</h3>
+                            <p class="text-custom-on-surface-variant text-body-md line-clamp-2 mb-0">
+                                Святковий оксамитовий жилет із метеликом для особливих подій. Справжній пухнастий аристократ!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Керування класами активності кнопок
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('bg-custom-secondary', 'text-custom-on-secondary', 'active');
+                    btn.classList.add('bg-custom-lowest', 'text-custom-on-background');
+                });
+                
+                button.classList.remove('bg-custom-lowest', 'text-custom-on-background');
+                button.classList.add('bg-custom-secondary', 'text-custom-on-secondary', 'active');
+
+                const filterValue = button.getAttribute('data-filter');
+                const items = document.querySelectorAll('.gallery-item');
+
+                // Логіка показу/ховання карток
+                items.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('d-none');
+                    } else {
+                        item.classList.add('d-none');
+                    }
+                });
+            });
+        });
+
+        // Імітація оновлення кошика з localStorage, якщо у вас підключено cart.js
+        function syncCartBadge() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const badge = document.querySelector('.badge-cart');
+            if(badge) {
+                const totalCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+                badge.textContent = totalCount;
+            }
+        }
+        window.addEventListener('DOMContentLoaded', syncCartBadge);
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* Повна синхронізація з дизайн-системою проєкту */
+:root {
+    --primary: #a04100;
+    --primary-container: #f27024;
+    --on-primary: #ffffff;
+    --secondary: #006a60;
+    --on-secondary: #ffffff;
+    --tertiary: #825500;
+    --on-tertiary: #ffffff;
+    --background: #f8f9fa;
+    --on-background: #191c1d;
+    --surface: #f8f9fa;
+    --surface-low: #f3f4f5;
+    --surface-high: #e7e8e9;
+    --surface-highest: #e1e3e4;
+    --surface-lowest: #ffffff;
+    --on-surface-variant: #584238;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: var(--background);
+}
+
+.container-custom {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Іконки Google Material */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+
+/* Кольорові утиліти */
+.bg-custom-background {
+    background-color: var(--background);
+}
+
+.text-custom-on-background {
+    color: var(--on-background);
+}
+
+.bg-custom-surface {
+    background-color: var(--surface);
+}
+
+.text-custom-primary {
+    color: var(--primary);
+}
+
+.bg-custom-primary {
+    background-color: var(--primary);
+}
+
+.text-custom-on-primary {
+    color: var(--on-primary);
+}
+
+.bg-custom-secondary {
+    background-color: var(--secondary);
+}
+
+.text-custom-on-secondary {
+    color: var(--on-secondary);
+}
+
+.bg-custom-tertiary {
+    background-color: var(--tertiary);
+}
+
+.text-custom-on-tertiary {
+    color: var(--on-tertiary);
+}
+
+.text-custom-on-surface-variant {
+    color: var(--on-surface-variant);
+}
+
+.bg-custom-lowest {
+    background-color: var(--surface-lowest);
+}
+
+.bg-custom-low {
+    background-color: var(--surface-low);
+}
+
+.bg-custom-highest {
+    background-color: var(--surface-highest);
+}
+
+.border-custom-opacity {
+    border-color: rgba(224, 192, 178, 0.2) !important;
+}
+
+/* Типографіка */
+.font-headline-md {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.font-display-lg {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: calc(1.5rem + 1.5vw);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+@media (min-width: 1200px) {
+    .font-display-lg {
+        font-size: 44px;
+    }
+}
+
+.font-label-bold {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.font-body-lg {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 18px;
+}
+
+.font-body-md {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+}
+
+.text-caption {
+    font-size: 13px;
+}
+
+.text-xs {
+    font-size: 10px;
+}
+
+/* Картки та анімація */
+.custom-rounded {
+    border-radius: 0.75rem;
+}
+
+.card-custom {
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aspect-square {
+    aspect-ratio: 1 / 1;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.max-w-xl {
+    max-width: 576px;
+}
+
+/* Ефекти наведення */
+.group-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.group-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.nav-custom-link:hover {
+    color: var(--secondary);
+}
+
+.hover-btn-sec:hover {
+    background-color: var(--primary-container) !important;
+}
+
+.logo-btn:active {
+    transform: scale(0.96);
+}
